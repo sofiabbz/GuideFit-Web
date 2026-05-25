@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    container_name: guidefit_db
+    restart: always
+    environment:
+      POSTGRES_DB: guidefit
+      POSTGRES_USER: guidefit_user
+      POSTGRES_PASSWORD: guidefit123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
