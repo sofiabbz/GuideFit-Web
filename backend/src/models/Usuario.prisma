@@ -1,0 +1,25 @@
+// Arquivo de referência do modelo Usuario
+// O arquivo real está em: prisma/schema.prisma
+
+model Usuario {
+  id        String   @id @default(uuid())
+  nome      String
+  email     String   @unique
+  senhaHash String   @map("senha_hash")
+  criadoEm  DateTime @default(now()) @map("criado_em")
+
+  @@map("usuarios")
+}
+
+/*
+  ┌─────────────────────────────────────────────────┐
+  │ MODEL LAYER - Define a estrutura dos dados      │
+  └─────────────────────────────────────────────────┘
+  
+  Este modelo define como os dados de Usuario são armazenados:
+  - id: Identificador único (UUID)
+  - nome: Nome do usuário
+  - email: Email único (não pode repetir)
+  - senhaHash: Senha criptografada
+  - criadoEm: Data de criação automática
+*/

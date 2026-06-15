@@ -1,4 +1,4 @@
-# GuideFit 🏋️
+# GuideFit 
 
 Sistema de treino personalizado desenvolvido com React, Node.js e PostgreSQL.
 
@@ -26,7 +26,7 @@ git clone https://github.com/sofiabbz/guidefit.git
 cd guidefit
 ```
 ### OBS!!!!!
-> ⚠️ **Atenção:** Se você já tinha o projeto anterior rodando no Docker, 
+>  **Atenção:** Se você já tinha o projeto anterior rodando no Docker, 
 > pare ele antes de subir o novo para evitar conflito de portas:
 > ```bash
 > cd pasta-que-está-o-projeto-anterior/backend

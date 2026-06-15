@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+  --verde-escuro: #3a7a6e;
+  --verde-medio: #4a9688;
+  --verde-rodape: #4a9688;
+  --azul-rodape: #3d7a8a;
+  --cinza-rodape: #2e6070;
+  --texto-escuro: #1e2d2b;
+  --texto-claro: #7aa09a;
+  --fundo: #f2f7f6;
+  --branco: #ffffff;
+  --borda-input: #c8deda;
+  --fundo-input: #f7fbfa;
+  --erro: #e05c5c;
+  --sombra: 0 8px 40px rgba(58,122,110,0.12);
+}
+
+#root:has(.pagina) {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--fundo) 0%, rgba(94,190,170,0.08) 50%);
+}
+
+.principal {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--branco);
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--borda-input);
+}
+
+.logo-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--verde-escuro);
+}
+
+.titulo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--verde-escuro);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+input {
+  width: 100%;
+  height: 46px;
+  border: 1.5px solid var(--borda-input);
+  border-radius: 10px;
+  background: var(--fundo-input);
+  padding: 0 16px;
+  font-size: 15px;
+  color: var(--texto-escuro);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: var(--verde-medio);
+  box-shadow: 0 0 0 3px rgba(74,150,136,0.15);
+  background: var(--branco);
+}
+
+input::placeholder {
+  color: var(--texto-claro);
+}
+
+input.erro-input {
+  border-color: var(--erro);
+  box-shadow: 0 0 0 3px rgba(224,92,92,0.12);
+}
+
+.msg-erro {
+  font-size: 13px;
+  color: var(--erro);
+  font-weight: 500;
+}
+
+.erro-geral {
+  font-size: 14px;
+  color: #c0392b;
+  padding: 10px 12px;
+  border: 1px solid var(--erro);
+  border-radius: 8px;
+  background: #fff5f5;
+  text-align: center;
+}
+
+.btn-cadastrar {
+  width: 100%;
+  margin-top: 16px;
+  height: 46px;
+  background: var(--verde-medio);
+  color: var(--branco);
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(74,150,136,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-cadastrar:hover:not(:disabled) {
+  background: var(--verde-escuro);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74,150,136,0.4);
+}
+
+.btn-cadastrar:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-cadastrar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.link-login {
+  font-size: 14px;
+  color: var(--texto-claro);
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--borda-input);
+}
+
+.link-login a {
+  color: var(--verde-medio);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.link-login a:hover {
+  color: var(--verde-escuro);
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.linha-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,0.9);
+  transition: filter 0.2s ease;
+}
+
+.linha-rodape:hover {
+  filter: brightness(1.15);
+}
+
+.rodape-sobre {
+  background: var(--verde-rodape);
+}
+
+.rodape-cultura {
+  background: var(--azul-rodape);
+}
+
+.rodape-sac {
+  background: var(--cinza-rodape);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .logo-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .btn-cadastrar {
+    font-size: 15px;
+  }
+}

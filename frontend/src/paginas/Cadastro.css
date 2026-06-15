@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+  --verde-escuro:  #3a7a6e;
+  --verde-medio:   #4a9688;
+  --verde-rodape:  #4a9688;
+  --azul-rodape:   #3d7a8a;
+  --texto-escuro:  #1e2d2b;
+  --texto-medio:   #3a5450;
+  --texto-claro:   #7aa09a;
+  --fundo:         #f2f7f6;
+  --branco:        #ffffff;
+  --borda-input:   #c8deda;
+  --fundo-input:   #f7fbfa;
+  --erro-input:    #e05c5c;
+  --sombra-card:   0 8px 40px rgba(58,122,110,0.12), 0 2px 8px rgba(0,0,0,0.06);
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: var(--fundo);
+}
+
+/* Override do #root global */
+#root:has(.pagina) {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-inline: none;
+  min-height: unset;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout raiz */
+.pagina {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--fundo) 0%, rgba(94,190,170,0.08) 50%);
+}
+
+/* Área central */
+.principal {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--branco);
+  border-radius: 20px;
+  box-shadow: var(--sombra-card);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Logo */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--borda-input);
+}
+
+.logo-icon {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 35px;
+  font-weight: 700;
+  margin-right: 40px;
+  color: var(--verde-escuro);
+}
+
+/* Título */
+.titulo {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--verde-escuro);
+  text-align: center;
+}
+
+/* Erro geral */
+.erro-geral {
+  font-size: 13px;
+  color: #c0392b;
+  padding: 8px 12px;
+  border: 1px solid var(--erro-input);
+  border-radius: 8px;
+  background: #fff5f5;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 750;
+  color: var(--verde-escuro);
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 46px;
+  border: 1.5px solid var(--borda-input);
+  border-radius: 10px;
+  background: var(--branco);
+  padding: 0 16px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 15px;
+  color: var(--texto-escuro);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: var(--verde-medio);
+  box-shadow: 0 0 0 3px rgba(74,150,136,0.15);
+}
+
+input::placeholder {
+  color: var(--texto-claro);
+}
+
+input.erro {
+  border-color: var(--erro-input);
+  box-shadow: 0 0 0 3px rgba(224,92,92,0.12);
+}
+
+.msg-erro {
+  font-size: 14px;
+  color: var(--erro-input);
+}
+
+/* Força da senha */
+.forca-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.forca-bolinha {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.forca-rotulo {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Botão */
+.btn-cadastrar {
+  width: 100%;
+  margin-top: 18px;
+  height: 46px;
+  background: var(--verde-medio);
+  color: var(--branco);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 16px rgba(74,150,136,0.30);
+}
+
+.btn-cadastrar:hover {
+  background: var(--verde-escuro);
+}
+
+.btn-cadastrar:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Link login */
+.link-login {
+  font-size: 16px;
+  color: var(--texto-claro);
+  text-align: center;
+  padding-top: 4px;
+  border-top: 1px solid var(--borda-input);
+}
+
+.link-login a {
+  color: var(--verde-medio);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-login a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.linha-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.linha-rodape:hover {
+  filter: brightness(1.12);
+}
+
+.rodape-sobre {
+  background: var(--verde-rodape);
+  color: rgba(255,255,255,0.92);
+}
+
+.rodape-cultura {
+  background: var(--azul-rodape);
+  color: rgba(255,255,255,0.85);
+}
+
+.rodape-sac {
+  background: #2e6070;
+  color: rgba(255,255,255,0.80);
+}

@@ -1,21 +1,25 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import Cadastro from './pages/Cadastro'
+import Cadastro from './paginas/Cadastro'
+import Login from './paginas/Login'
+import Onboarding from './paginas/Onboarding'
+
 
 // TODO: importar as demais páginas quando forem criadas
-// import Login from './pages/Login'
-// import Onboarding from './pages/Onboarding'
-// import Dashboard from './pages/Dashboard'
+// import Onboarding from './paginas/Onboarding'
+// import Painel from './paginas/Painel'
 
-function App() {
+function Aplicacao() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"          element={<Navigate to="/cadastro" />} />
-        <Route path="/cadastro"  element={<Cadastro />} />
+        <Route path="/"         element={<Navigate to="/cadastro" />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/login"    element={<Login />} />
+        <Route path="/onboarding" element={<Onboarding />} />
         {/* Adicionar rotas aqui conforme as páginas forem criadas */}
       </Routes>
     </BrowserRouter>
   )
 }
 
-export default App
+export default Aplicacao
