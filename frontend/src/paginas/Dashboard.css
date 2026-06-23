@@ -1,0 +1,239 @@
+/* Layout Geral e Fundo Cinza/Gelo da foto de Cadastro */
+.dashboard-page {
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+ 
+/* Card Central Branco com Cantos Arredondados */
+.dashboard-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  box-sizing: border-box;
+}
+ 
+/* Logo e Divisores */
+.brand-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+ 
+.brand-logo { font-size: 22px; }
+.brand-name { color: #499388; font-size: 24px; font-weight: 700; margin: 0; }
+.brand-divider { border: 0; border-top: 1px solid #eef2f1; margin-bottom: 25px; }
+ 
+/* Textos de Apoio */
+.dashboard-title { color: #385e58; font-size: 20px; font-weight: 600; margin: 0 0 8px 0; }
+.welcome-text { color: #666; font-size: 13px; margin: 0 0 25px 0; }
+ 
+.sem-treino-container { padding: 20px 10px; }
+.sem-treino-texto { font-size: 14px; color: #c44545; margin-bottom: 25px; line-height: 1.5; font-weight: 500; }
+ 
+.dias-abas-navegacao { display: flex; gap: 5px; justify-content: space-between; margin-bottom: 20px; }
+.aba-dia-btn { background: none; border: 1px solid #e1ebe9; border-radius: 6px; padding: 6px 10px; font-size: 11px; font-weight: 600; color: #666; cursor: pointer; flex: 1; transition: all 0.2s ease; }
+.aba-dia-btn.aba-ativa { background-color: #499388; color: white; border-color: #499388; }
+ 
+.workout-section { background-color: #fafdfc; border: 1px solid #e1ebe9; border-radius: 8px; padding: 15px; text-align: left; margin-bottom: 25px; }
+.workout-header { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 5px 0; }
+.workout-focus { color: #499388; font-size: 16px; font-weight: 700; margin: 0 0 15px 0; }
+ 
+.exercises-container { display: flex; flex-direction: column; gap: 10px; }
+.exercise-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px dashed #e1ebe9; }
+.exercise-row:last-child { border-bottom: none; padding-bottom: 0; }
+.exercise-main-info { display: flex; flex-direction: column; text-align: left; width: 100%; }
+.exercise-name { font-size: 13px; color: #333; font-weight: 500; }
+.exercise-sub { font-size: 11px; color: #499388; font-weight: 600; margin-top: 2px; }
+ 
+.btn-primary { background-color: #499388; color: #ffffff; border: none; width: 100%; padding: 14px; font-size: 14px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: background-color 0.2s ease; }
+.btn-primary:hover { background-color: #3b786e; }
+
+.shortcuts-links { margin-top: 25px; font-size: 12px; color: #666; display: flex; justify-content: center; gap: 10px; }
+.link-item { color: #499388; cursor: pointer; font-weight: 500; }
+.link-item:hover { text-decoration: underline; }
+.link-divider { color: #ccc; }
+ 
+.custom-footer { width: 100%; margin-top: 50px; }
+.footer-bar { width: 100%; text-align: center; font-size: 11px; font-weight: 700; color: #ffffff; padding: 12px 0; letter-spacing: 0.5px; }
+.bar-top { background-color: #499388; }
+.bar-middle { background-color: #3d7870; }
+.bar-bottom { background-color: #2d5550; }
+
+.exercise-actions-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn-ver-execucao {
+  background: none;
+  border: 1px solid #499388;
+  color: #499388;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn-ver-execucao:hover {
+  background-color: #499388;
+  color: #ffffff;
+}
+
+.btn-concluido-check {
+  background-color: #e1ebe9;
+  border: none;
+  color: #499388;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-concluido-check:hover {
+  background-color: #cbdcd9;
+}
+
+.btn-concluido-check.checked {
+  background-color: #499388;
+  color: #ffffff;
+}
+
+.row-concluida .exercise-name {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.row-concluida .exercise-sub {
+  color: #888;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 94, 88, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.modal-title {
+  color: #385e58;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.modal-subtitle {
+  color: #666;
+  font-size: 12px;
+  margin: 0 0 15px 0;
+}
+
+.video-player-placeholder {
+  background-color: #fafdfc;
+  border: 1px dashed #e1ebe9;
+  border-radius: 8px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.video-text-placeholder {
+  font-size: 11px;
+  color: #499388;
+}
+
+.cronometro-container {
+  background-color: #fafdfc;
+  border: 1px solid #e1ebe9;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.cronometro-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #499388;
+  margin: 0 0 3px 0;
+}
+
+.cronometro-display {
+  font-size: 28px;
+  font-weight: 700;
+  color: #385e58;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.cronometro-botoes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-cronometro-acao {
+  background-color: #499388;
+  color: #ffffff;
+  border: none;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cronometro-acao:hover {
+  background-color: #3b786e;
+}
+
+.btn-cronometro-reset {
+  background: none;
+  border: 1px solid #e1ebe9;
+  color: #385e58;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cronometro-reset:hover {
+  background-color: #e1ebe9;
+}
