@@ -21,8 +21,8 @@ function Dashboard() {
         setTempo((prev) => prev - 1);
       }, 1000);
   } else if (tempo === 0) {
-  setCronometroRodando(false);
   setTimeout(() => {
+    setCronometroRodando(false);
     alert("Tempo de descanso concluído!");
     setTempo(60);
   }, 0);
