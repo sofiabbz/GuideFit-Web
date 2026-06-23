@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Dashboard.css';
 
 function Dashboard() {
@@ -20,11 +20,13 @@ function Dashboard() {
       intervalo = setInterval(() => {
         setTempo((prev) => prev - 1);
       }, 1000);
-    } else if (tempo === 0) {
-      setCronometroRodando(false);
-      alert("Tempo de descanso concluído!");
-      setTempo(60); 
-    }
+  } else if (tempo === 0) {
+  setCronometroRodando(false);
+  setTimeout(() => {
+    alert("Tempo de descanso concluído!");
+    setTempo(60);
+  }, 0);
+}
     return () => clearInterval(intervalo);
   }, [cronometroRodando, tempo]);
 
